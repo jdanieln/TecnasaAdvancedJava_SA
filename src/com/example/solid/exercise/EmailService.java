@@ -1,7 +1,8 @@
 package com.example.solid.exercise;
 
-public class EmailService {
-    public void sendEmail(String recipient, String message) {
-        System.out.println("Sending email to " + recipient + ": " + message);
+class EmailService implements NotificationService {
+    @Override
+    public void sendNotification(Order order) {
+        System.out.println("Sending email to " + order.getCustomerEmail() + ": Your order has been processed.");
     }
 }
